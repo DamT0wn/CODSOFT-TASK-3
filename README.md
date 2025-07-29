@@ -28,7 +28,7 @@ Clone the repository:
 
 Bash
 
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/DamT0wn/CODSOFT-TASK-3
 Navigate to the project directory:
 
 Bash
