@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aesthetic Calculator</title>
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-900 flex items-center justify-center min-h-screen">
+    <div class="calculator-container">
+        <div class="calculator-display" id="display">0</div>
+        <div class="calculator-buttons">
+            <button class="calculator-button clear" data-action="clear">AC</button>
+            <button class="calculator-button operator" data-action="negate">+/-</button>
+            <button class="calculator-button operator" data-action="percent">%</button>
+            <button class="calculator-button operator" data-action="divide">/</button>
+
+            <button class="calculator-button" data-value="7">7</button>
+            <button class="calculator-button" data-value="8">8</button>
+            <button class="calculator-button" data-value="9">9</button>
+            <button class="calculator-button operator" data-action="multiply">*</button>
+
+            <button class="calculator-button" data-value="4">4</button>
+            <button class="calculator-button" data-value="5">5</button>
+            <button class="calculator-button" data-value="6">6</button>
+            <button class="calculator-button operator" data-action="subtract">-</button>
+
+            <button class="calculator-button" data-value="1">1</button>
+            <button class="calculator-button" data-value="2">2</button>
+            <button class="calculator-button" data-value="3">3</button>
+            <button class="calculator-button operator" data-action="add">+</button>
+
+            <button class="calculator-button zero" data-value="0">0</button>
+            <button class="calculator-button" data-value=".">.</button>
+            <button class="calculator-button equals" data-action="equals">=</button>
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

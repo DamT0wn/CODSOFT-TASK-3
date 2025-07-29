@@ -1,0 +1,132 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #1a202c; /* Dark background for the page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Prevent scrollbars */
+}
+
+/* Custom styles for the calculator container */
+.calculator-container {
+    background-color: #2d3748; /* Darker grey for the calculator body */
+    border-radius: 1.5rem; /* More rounded corners */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.4); /* Deeper shadow */
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 320px; /* Fixed width for a compact calculator */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Display area styling */
+.calculator-display {
+    background-color: #1a202c; /* Even darker for the display */
+    color: #e2e8f0; /* Light text color */
+    font-size: 2.5rem; /* Larger font size */
+    padding: 1rem 1.25rem;
+    border-radius: 0.75rem; /* Rounded display */
+    text-align: right;
+    height: 80px; /* Fixed height for consistent look */
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    overflow: hidden; /* Hide overflow text */
+    white-space: nowrap; /* Prevent wrapping */
+}
+
+/* Button grid layout */
+.calculator-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 0.75rem; /* Spacing between buttons */
+}
+
+/* Base button styling */
+.calculator-button {
+    background-color: #4a5568; /* Grey for number buttons */
+    color: #e2e8f0; /* Light text */
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 0.75rem; /* Rounded buttons */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    user-select: none; /* Prevent text selection */
+    min-width: 60px; /* Ensure minimum width for buttons */
+    min-height: 60px; /* Ensure minimum height for buttons */
+}
+
+.calculator-button:hover {
+    background-color: #616e7f; /* Lighter grey on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.calculator-button:active {
+    transform: translateY(0); /* Press down effect */
+    background-color: #3b4252; /* Darker on active */
+}
+
+/* Operator button styling */
+.operator {
+    background-color: #f6ad55; /* Orange for operators */
+    color: #1a202c; /* Dark text for operators */
+    font-weight: 600;
+}
+
+.operator:hover {
+    background-color: #ed8936; /* Darker orange on hover */
+}
+
+/* Clear button styling */
+.clear {
+    background-color: #e53e3e; /* Red for clear */
+    color: #e2e8f0;
+}
+
+.clear:hover {
+    background-color: #c53030; /* Darker red on hover */
+}
+
+/* Equals button styling */
+.equals {
+    background-color: #48bb78; /* Green for equals */
+    color: #1a202c;
+    grid-column: span 2; /* Make equals button span two columns */
+}
+
+.equals:hover {
+    background-color: #38a169; /* Darker green on hover */
+}
+
+/* Zero button styling */
+.zero {
+    grid-column: span 2; /* Make zero button span two columns */
+}
+
+/* Responsive adjustments */
+@media (max-width: 400px) {
+    .calculator-container {
+        margin: 1rem;
+        padding: 1rem;
+        max-width: 95%; /* Adjust max-width for smaller screens */
+    }
+    .calculator-display {
+        font-size: 2rem; /* Smaller font on small screens */
+        height: 70px;
+    }
+    .calculator-button {
+        font-size: 1.25rem;
+        padding: 0.75rem;
+        min-width: 50px;
+        min-height: 50px;
+    }
+    .calculator-buttons {
+        gap: 0.5rem;
+    }
+}
